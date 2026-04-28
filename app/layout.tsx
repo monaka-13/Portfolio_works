@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio",
+  title: "Keisuke Shigenaga",
   description: "Professional portfolio — experience, skills, and contact.",
 };
 

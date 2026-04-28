@@ -18,9 +18,14 @@ export function OverviewSection() {
         <span className="text-primary">{site.name}</span><br />
           {site.tagline}
         </h1>
-        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+        <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">
           {site.bio}
         </p>
+        <ul className="mt-4 max-w-3xl list-disc space-y-2 pl-6 text-base leading-relaxed text-muted-foreground marker:text-primary/80 md:text-lg">
+          {site.strengths.map((strength) => (
+            <li key={strength}>{strength}</li>
+          ))}
+        </ul>
         <div className="mt-10 flex flex-wrap gap-3">
           <Button asChild size="lg" className="shadow-sm shadow-primary/15">
             <Link href="#links">

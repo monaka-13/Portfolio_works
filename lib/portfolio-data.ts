@@ -1,8 +1,13 @@
 export const site = {
   name: "Keisuke Shigenaga",
   role: "Full-Stack Software Engineer",
-  tagline: "Mastering the machine through strategic insight.",
-  bio: "Full Stack Software Engineer with 5+ years of hands-on experience specializing in Java, C#/.NET, and Modern Frontend Frameworks (Vue 3, React), currently based in Vancouver, BC. Proven track record in modernizing legacy systems, optimizing high-availability financial platforms, and leading technical QA initiatives. Expert in writing clean, maintainable code based on SOLID principles and navigating complex hybrid cloud environments. Successfully mastered Vue 3 within two weeks to lead the migration of a mission-critical disaster system, meeting an accelerated 3-month launch deadline. Nowadays, expanding AI skills to enhance development capabilities.",
+  tagline: "Precision in Routine, Clarity in Execution.",
+  bio: "Full Stack Software Engineer with 5+ years of experience in Java, C#/.NET, PHP, and Modern Frontend Frameworks (React, Vue.js). Currently based in Vancouver and authorized to work in Canada.",
+  strengths: [
+    "Specialized in modernizing legacy systems and optimizing high-availability financial platforms, with a proven ability to lead technical QA initiatives.",
+    "Committed to writing clean, maintainable code using SOLID principles and industry best practices.",
+    "Mastered Vue.js within a week to lead the migration of a mission-critical disaster response system, delivering the project under an accelerated 3-month deadline.",
+  ],
   email: "kshigenaga5@gmail.com",
   social: {
     github: "https://github.com/monaka-13",
@@ -103,9 +108,10 @@ export const experiences: ExperienceItem[] = [
     date: "Jan 2020 – Jun 2024 ",
     location: "Tokyo, Japan",
     techniques: [],
-    summary:
-      "Strategic technical consultant deployed to major enterprise clients across finance and public sectors.",
-    details: [],
+    summary: "Worked as aTechnical consultant",
+    details: [
+      "Technical consultant deployed to major enterprise clients across finance and public sectors.",
+    ],
   },
   {
     id: "exp-1",
@@ -125,12 +131,12 @@ export const experiences: ExperienceItem[] = [
     summary:
       "An unified platform for managing administrative tasks like address changes online. It allows users to update info across banks, insurance, and utilities simultaneously, ensuring efficiency and accuracy. As a full-stack engineer supporting 30+ banks and 10,000 users, I managed tech migrations, streamlined fault investigations, and achieved seamless team knowledge sharing.",
     details: [
-      "Incident Management & Observability: Led Tier-3 technical support for a high-concurrency financial platform connecting 30+ major banks. Reduced MTTR and inquiry resolution time by 40% by implementing structured logging in ASP.NET Core and embedding unique Transaction/User IDs into AWS CloudWatch, enabling rapid defect isolation in production.",
-      "System Ownership & Business Alignment: Directed the end-to-end development and operation of sales promotion campaign systems. Presented technical roadmaps to non-technical business stakeholders, translating complex logic into business value. Successfully managed a 30% traffic surge during peak campaigns, contributing to new user acquisition and re-engagement.",
-      "Data Lifecycle & Migration: Orchestrated a hybrid data environment (AWS Batch & Windows Task Scheduler) to manage critical data flows between AWS RDS (MySQL) and on-premise SQL Server. Audited and rectified legacy scheduler specifications to ensure 100% data consistency during inactiveto-active user restoration.",
-      "Crisis Resolution: Led the emergency technical response to government API updates regarding address/postal code format changes. Re-aligned application logic with external postal verification systems under tight deadlines, preventing potential financial losses and failed transactions.",
-      "QA Leadership & Strategic Improvement: Oversaw comprehensive testing and code reviews for new features, focusing on long-term maintainability and exception handling. Managed the planning and implementation of next-phase system optimizations based on production feedback.",
-      "Internal Tooling & Knowledge Management: Developed a custom internal CRUD tool using Power Platform to centralize technical and specification knowledge. Improved team-wide productivity by enabling non-technical members to safely query data structures via a shared SQL knowledge base, fostering a culture of self-service data analysis.",
+      "Led Tier-3 technical support for a high-volume financial platform connecting 30+ banks and 10,000+ users. Reduced MTTR by 40% by implementing structured logging in ASP.NET Core and unique Transaction IDs for rapid defect isolation in AWS CloudWatch.",
+      "Directed end-to-end development for large-scale sales promotion campaigns, successfully managing a 30% traffic surge. Acted as a technical bridge to stakeholders, translating complex logic into business roadmaps.",
+      "Optimized a hybrid data environment (AWS Batch & Windows Task Scheduler) to synchronize data between AWS RDS (MySQL) and on-premise SQL Server. Identified and resolved legacy bugs, ensuring 100% data consistency for user restoration.",
+      "Enhanced team productivity by developing internal knowledge tools using Power Platform (Power Automate, Power Apps). Enabled non-technical members to perform self-service data analysis via a shared SQL knowledge base, fostering a data-driven culture.",
+      "Managed regulatory system updates regarding government API changes for address/postal formats. Re-aligned application logic under tight deadlines to prevent financial transaction failures.",
+      "Oversaw QA and code reviews for new features, focusing on long-term maintainability. Leveraged production feedback to plan and implement next-phase system optimizations.",
     ],
   },
   {
@@ -143,9 +149,10 @@ export const experiences: ExperienceItem[] = [
     summary:
       "Evaluated the viability of code-gen platforms like OutSystems and .NET. Identified architectural risks by using decompilation for reverse engineering. Concluded that while useful for internal tools, they pose scalability risks for core systems, prioritizing long-term stability over short-term velocity.",
     details: [
-      "Architectural Auditing & Reverse Engineering: Evaluated the technical viability of code-generation platforms (OutSystems, .NET-based) for enterprise-scale integration. Used decompilation tools to audit the quality of generated code, identifying architectural bottlenecks and maintainability risks inherent in abstracted development environments.",
-      "Technology Governance & Strategy: Led a comparative study to determine the boundaries between native development and automated platforms. Concluded that while such platforms excel at rapid internal tooling, they posed scalability risks for core systems—a strategic insight that prioritized longterm system stability over short-term velocity.",
-      "Comparative Analysis: Benchmarked enterprise and open-source ecosystems to align technology adoption with specific business needs, ensuring a data-driven approach to tool selection.",
+      "Benchmarked enterprise and open-source ecosystems to align technology adoption with specific business needs, ensuring a data-driven approach to tool selection.",
+      "Evaluated the technical viability of code-generation platforms, including OutSystems (C#/.NET based), by auditing generated source code to identify architectural bottlenecks and maintainability risks.",
+      "Demonstrated deep technical insight by manually analyzing abstracted development environments, identifying the gap between “functional” code and enterprise-grade maintainability.",
+      "Provided strategic recommendations on business model alignment, concluding that while automated platforms excel in rapid tooling, they required fundamental shifts in business strategy to ensure long-term scalability.",
     ],
   },
   {
@@ -158,10 +165,11 @@ export const experiences: ExperienceItem[] = [
     summary:
       "Spearheaded a legacy system migration by adopting Vue 3, achieving proficiency in one week and delivering core features under a tight timeline. Managed API integrations, audited Java backends to resolve critical defects, and prototyped UI components to ensure high velocity and system stability.",
     details: [
-      "Modernization & Tech Selection: Spearheaded the migration of a legacy disaster response system. Led the initial feasibility study to adopt Vue 3 (Composition API) over Vue 2, ensuring long-term maintainability. Despite no prior Vue experience, achieved full proficiency within one week and delivered the highest volume of features under a tight 3-month agile timeline.",
-      "API Lifecycle Management: Orchestrated API integration by defining JSON schemas with backend teams. Rigorously validated endpoints using Postman, creating comprehensive test suites that ensured data integrity and seamless frontend-backend communication.",
-      "Cross-Stack Bug Resolution: Performed deep-dive audits of Java backend code to resolve complex defects. Identified and documented root causes such as edge-case logic errors and potential NullPointerExceptions, providing actionable refactoring proposals that prevented critical system failures during the migration.",
-      "Agile UX Prototyping: Acted as a technical bridge with the design team by rapidly translating mockups into functional Vue components. Proposed UI layout optimizations based on disaster-response usability requirements, maintaining high project velocity through proactive prototyping.",
+      "Modernized a legacy disaster response system using Vue.js 3, delivering the highest volume of features within a tight 3-month agile timeline.",
+      "Mastered Vue 3 within one week to lead the frontend migration, achieving full proficiency despite no prior experience with the modern JavaScript framework.",
+      "Proposed UI layout optimizations by translating design mockups into functional Vue.js components, acting as a technical bridge between design and engineering teams.",
+      "Integrated APIs by defining JSON schemas with backend teams, ensuring seamless communication and data integrity through comprehensive Postman test suites.",
+      "Resolved complex defects in Java backend code by performing deep-dive audits, providing actionable refactoring proposals to prevent critical system failures.",
     ],
   },
   {
@@ -174,10 +182,10 @@ export const experiences: ExperienceItem[] = [
     summary:
       "Orchestrated a CakePHP 2 to 4 migration for a custom CMS, ensuring parity by auditing undocumented legacy code. Leveraged Java patterns to master the ORM, developed utility functions for version gaps, and authored the team playbook to standardize the roadmap and ensure long-term stability.",
     details: [
-      "Legacy Framework Migration (CakePHP 2 to 4): Orchestrated a large-scale architectural upgrade of a customized CMS. Navigated significant breaking changes by auditing legacy source code to reconstruct deprecated functions where no official documentation existed, ensuring 100% feature parity.",
-      "Architectural Gap Analysis: Despite being early in my career and new to PHP, leveraged deep Java logic patterns to rapidly master CakePHP's internal routing and ORM. Developed custom utility functions to bridge the gap between framework versions, maintaining the integrity of the core business logic.",
-      "Technical Governance & Documentation: Authored the primary 'Migration Playbook' for a 6- person engineering team. Established the migration roadmap and coding standards that served as the operational baseline, preventing architectural drift and ensuring consistency across the entire transition process.",
-      "Full-Cycle Involvement: Participated in the project from the planning phase through to final implementation, translating high-level business requirements into technical migration tasks for a secure, enterprise-grade portal system.",
+      "Led the architectural upgrade of a customized CMS from CakePHP 2 to 4, ensuring 100% feature parity by auditing undocumented legacy source code.",
+      'Authored the "Migration Playbook" for a 6-person team, establishing coding standards and a roadmap that prevented architectural drift throughout the transition.',
+      "Accelerated development velocity by applying Java design patterns to PHP/ORM environments, enabling rapid mastery of a new tech stack and complex business logic.",
+      "Streamlined the migration process by translating complex business requirements into high-security technical tasks, maintaining system integrity during the full-cycle implementation.",
     ],
   },
   {
@@ -198,10 +206,11 @@ export const experiences: ExperienceItem[] = [
     summary:
       "Led the shift from custom builds to a scalable enterprise portal by developing reusable Java components. Prioritized maintainability via SOLID principles and JUnit testing, while ensuring clarity through PlantUML. My full-stack expertise optimized deployment and team-wide productivity.",
     details: [
-      "Product Development & Standardization: Contributed to the strategic transition of a web portal service from customized client-specific builds to a scalable enterprise product. Developed reusable Java components on the Liferay platform, enabling rapid deployment for manufacturing and academic clients.",
-      "Core Java Engineering: Mastered Clean Code and SOLID principles through intensive pair programming with senior architects. Focused on long-term maintainability by implementing rigorous JUnit testing and refactoring legacy logic into decoupled, testable modules.",
-      "System Design & Documentation: Spearheaded the creation of technical specifications using PlantUML, ensuring architectural clarity before implementation. This disciplined approach to documentation resolved complex logic requirements and established a streamlined development workflow for the team.",
-      "Full-Stack Implementation: Managed the end-to-end stack including Vagrant/CentOS environments, PostgreSQL data persistence, and frontend customization using SCSS and Freemarker. Applied a 'think first, code later' philosophy to optimize personal and team-wide productivity.",
+      "Led the technical transition of a web portal service from client-specific builds to a scalable enterprise product, enabling the company to shift from a service-based to a product-based business model.",
+      "Developed reusable Java components on the Liferay platform, reducing deployment time for new manufacturing and academic clients.",
+      "Architected complex workflows and system specifications using PlantUML and Figma, ensuring technical clarity and cross-team alignment before implementation.",
+      "Managed full-stack environments, including Vagrant/CentOS setup, PostgreSQL database management, and frontend customization with SCSS and Freemarker.",
+      "Reduced testing phase duration by 30% by implementing automated JUnit tests and refactoring legacy logic into decoupled, testable modules.",
     ],
   },
 ];
@@ -213,13 +222,13 @@ export const personalProjects: PersonalProjectItem[] = [
     githubUrl: "https://github.com/monaka-13/Portfolio",
     techniques: ["Next.js", "TypeScript", "Tailwind CSS"],
     summary:
-      "Developed a high-performance portfolio site using React and TypeScript to demonstrate professional engineering proficiency. Engineered a responsive UI with decoupled card-and-dialog components for seamless cross-platform consistency while showcasing complex project details and AI integrations.",
+      "Architected a scalable portfolio using React/TypeScript, emphasizing a data-driven information hierarchy to deliver dense technical content without compromising UX. Maximized development velocity through an AI-integrated workflow, utilizing LLMs for rapid prototyping, complex debugging. Established a clean architecture by decoupling data models from UI components, ensuring high reusability and a foundation that supports content expansion, such as automated project ingestion.",
     details: [
-      "Designed a strategic information hierarchy featuring overview cards with technology tags and separate detailed modals to enable recruiters to grasp key points efficiently.",
-      "Demonstrated professional-grade proficiency and immediate readiness in non-commercial tech stacks by leveraging React, TypeScript, and AI-assisted programming.",
-      "Optimized readability across all devices by implementing scroll control and layout width optimization within dialogs to address legibility issues in long-form experience descriptions.",
-      "Enhanced maintainability and scalability for content updates by decoupling data structures into distinct summary and detail components.",
-      "Engineered UI components with high reusability and granularity, ensuring a flexible architecture capable of accommodating future expansions such as Projects or Case Study sections.",
+      "Designed an information hierarchy using technology tags and detailed modals to enable recruiters to quickly extract key technical competencies.",
+      "Implemented a modern tech stack featuring React and TypeScript, leveraging AI-assisted workflows to accelerate development from conception to deployment.",
+      "Optimized mobile responsiveness and legibility by implementing advanced scroll controls and dynamic layout adjustments within UI components.",
+      "Decoupled data structures from the UI layer to enhance maintainability, ensuring the architecture supports seamless content updates and future scalability.",
+      "Engineered granular, reusable UI components to provide a flexible foundation for expanding the portfolio with future project or case study modules.",
     ],
   },
   {
@@ -234,14 +243,12 @@ export const personalProjects: PersonalProjectItem[] = [
       "REST API",
     ],
     summary:
-      "A NestJS (TypeScript) API that drafts corporate communications and PR-style copy from pasted text or public article URLs. It calls the OpenAI API and returns structured JSON—summary, email subject, email body, and bullet key points. Article URLs are fetched via the Jina Reader HTTP API instead of scraping raw HTML; a separate pr-agent module is experimental scaffolding for GitHub pull-request workflows.",
+      "Architected a high-performance TypeScript and NestJS API designed to automate corporate communication workflows. The engine integrates OpenAI and Jina Reader APIs to transform raw text or URLs into structured, PR-ready JSON content. Built with a focus on maintainability and security, the system features a decoupled pipeline for content retrieval and LLM processing, ensuring consistent output across diverse data sources.",
     details: [
-      "Implements a content-draft pipeline: paste raw article or memo text, or supply a URL; the server optionally pulls readable content through the Jina Reader API, then runs the same LLM flow so outputs stay consistent across both entry points.",
-      "Exposes REST endpoints such as POST /content-draft/process (text body) and POST /content-draft/from-url (Jina-backed fetch, http/https only, with host safety checks such as blocking localhost), aligning with README-defined contracts and limits.",
-      "Produces PR-oriented drafts as JSON with fields like summary, email subject, email body, and key bullet points, driven by OpenAI models (configurable via environment variables).",
-      "Separates article retrieval concerns from generation: the project does not implement ad-hoc HTML scraping; it relies on Jina Reader, with optional API keys for higher rate limits and configurable fetch timeouts.",
-      "Includes a pr-agent module (experimental, largely stubbed) aimed at future GitHub pull-request review flows—explicitly documented as distinct from the PR-facing content-draft feature set.",
-      "Ships with setup docs (.env.example), Nest CLI layout, and test scripts (unit and e2e) for maintainable evolution of the API surface.",
+      "Engineered a unified content-drafting pipeline that standardizes data from disparate sources, raw text or public URLs, into consistent, structured JSON outputs including summaries, email templates, and key insights.",
+      "Integrated the Jina Reader HTTP API to separate content retrieval from generation logic, opting for a managed extraction service over fragile HTML scraping to ensure long-term system reliability.",
+      "Established a clean, modular architecture using NestJS, separating API contracts, business logic, and experimental modules (e.g., PR-agent scaffolding) to support future scalability and team collaboration.",
+      "Ensured production-readiness by delivering comprehensive setup documentation, environment-driven configurations, and a full test suite to maintain API stability during iterative evolution.",
     ],
   },
   {
