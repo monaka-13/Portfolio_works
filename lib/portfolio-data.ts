@@ -29,14 +29,12 @@ export const skillGroups: SkillGroup[] = [
   {
     title: "Backend",
     items: [
-      "Node.js",
       "Java",
+      "TypeScript",
+      "JavaScript",
+      "Node.js",
       "C#",
       "PHP",
-      "PostgreSQL",
-      "MySQL",
-      "Oracle",
-      "SQL Server",
     ],
   },
   {
@@ -45,7 +43,7 @@ export const skillGroups: SkillGroup[] = [
       "Spring Boot",
       "Spring MVC",
       ".NET Core",
-      "Vue.js (2/3)",
+      "Vue.js",
       "React",
       "CakePHP",
     ],
@@ -54,10 +52,11 @@ export const skillGroups: SkillGroup[] = [
     title: "Cloud / DevOps",
     items: [
       "AWS basics(EC2, S3, Lambda, RDS, CloudWatch etc.)",
+      "Docker",
       "Jenkins",
       "Git",
       "Vagrant",
-    ],
+   ],
   },
   {
     title: "Database",
@@ -69,6 +68,7 @@ export const skillGroups: SkillGroup[] = [
       "Agile/Scrum",
       "JUnit",
       "Unit Testing",
+      "REST API",
       "Postman",
       "Cognitive Flexibility",
       "Root Cause Analysis",
@@ -232,24 +232,32 @@ export const personalProjects: PersonalProjectItem[] = [
     ],
   },
   {
-    id: "proj-2",
-    title: "AI Agent News",
-    githubUrl: "https://github.com/monaka-13/ai-agent-news",
-    techniques: [
-      "NestJS",
+    "id": "",
+    "title": "News Curator",
+    "githubUrl": "https://github.com/monaka-13/news-curator.git",
+    "techniques": [
+      "Java 21",
+      "Spring Boot 4",
+      "Spring Data JPA",
+      "PostgreSQL 16",
+      "Flyway",
+      "Docker Compose",
+      "Jsoup",
+      "Groq API (OpenAI-compatible)",
+      "Spring @Async",
+      "React 19",
       "TypeScript",
-      "OpenAI API",
-      "Jina Reader",
-      "REST API",
+      "Vite 8",
+      "Zod"
     ],
-    summary:
-      "Architected a high-performance TypeScript and NestJS API designed to automate corporate communication workflows. The engine integrates OpenAI and Jina Reader APIs to transform raw text or URLs into structured, PR-ready JSON content. Built with a focus on maintainability and security, the system features a decoupled pipeline for content retrieval and LLM processing, ensuring consistent output across diverse data sources.",
-    details: [
-      "Engineered a unified content-drafting pipeline that standardizes data from disparate sources, raw text or public URLs, into consistent, structured JSON outputs including summaries, email templates, and key insights.",
-      "Integrated the Jina Reader HTTP API to separate content retrieval from generation logic, opting for a managed extraction service over fragile HTML scraping to ensure long-term system reliability.",
-      "Established a clean, modular architecture using NestJS, separating API contracts, business logic, and experimental modules (e.g., PR-agent scaffolding) to support future scalability and team collaboration.",
-      "Ensured production-readiness by delivering comprehensive setup documentation, environment-driven configurations, and a full test suite to maintain API stability during iterative evolution.",
-    ],
+    "summary": "A personal news reading list: register article URLs, fetch page text, store them in PostgreSQL, and add short English summaries via an OpenAI-compatible LLM API. Search and browse saved items in a React UI.",
+    "details": [
+      "Built a Spring Boot REST API (register, fetch, paginated list) with JPA and Flyway migrations on PostgreSQL started via Docker Compose.",
+      "Fetched and parsed article HTML with Jsoup; separated URL registration from content fetch so scraping and DB writes stay explicit.",
+      "Implemented PostgreSQL full-text search (to_tsvector + GIN index) on title and body for keyword lookup.",
+      "Ran LLM summarization asynchronously after fetch using an OpenAI-compatible HTTP client; stored results in summary_short.",
+      "Delivered a Vite/React frontend for URL registration and search, with Zod validation on API responses."
+    ]
   },
   {
     id: "proj-3",
@@ -271,6 +279,26 @@ export const personalProjects: PersonalProjectItem[] = [
       "Introduces hint and feedback mechanisms that visualize legal moves and provide contextual turn messages, helping users understand complex board constraints without reading external rules.",
       "Organizes code by responsibilities (Game, Board, Piece, RuleEngine, Config), separating pure game rules from rendering concerns to keep logic testable and easier to evolve.",
       "As an early-career engineer transitioning from object-oriented Java to component-based frontend architecture, the primary challenge was adopting a fundamentally different design mindset. I addressed this by applying clean-code principles learned from a Java mentor (clear responsibilities, small composable units, and explicit boundaries), which enabled me to complete the project independently. This learning foundation later translated directly into delivery speed in production: despite no prior commercial Vue experience, I ramped up on Vue within one week during a modernization project and delivered the highest feature volume in the team at that stage.",
+    ],
+  },
+  {
+    id: "proj-4",
+    title: "AI Agent News",
+    githubUrl: "https://github.com/monaka-13/ai-agent-news",
+    techniques: [
+      "NestJS",
+      "TypeScript",
+      "OpenAI API",
+      "Jina Reader",
+      "REST API",
+    ],
+    summary:
+      "Architected a high-performance TypeScript and NestJS API designed to automate corporate communication workflows. The engine integrates OpenAI and Jina Reader APIs to transform raw text or URLs into structured, PR-ready JSON content. Built with a focus on maintainability and security, the system features a decoupled pipeline for content retrieval and LLM processing, ensuring consistent output across diverse data sources.",
+    details: [
+      "Engineered a unified content-drafting pipeline that standardizes data from disparate sources, raw text or public URLs, into consistent, structured JSON outputs including summaries, email templates, and key insights.",
+      "Integrated the Jina Reader HTTP API to separate content retrieval from generation logic, opting for a managed extraction service over fragile HTML scraping to ensure long-term system reliability.",
+      "Established a clean, modular architecture using NestJS, separating API contracts, business logic, and experimental modules (e.g., PR-agent scaffolding) to support future scalability and team collaboration.",
+      "Ensured production-readiness by delivering comprehensive setup documentation, environment-driven configurations, and a full test suite to maintain API stability during iterative evolution.",
     ],
   },
 ];

@@ -13,7 +13,6 @@ export function SkillsSection() {
           Skills
         </h2>
         <p className="mt-2 max-w-2xl text-muted-foreground">
-          Grouped by area—edit lists in{" "}
           <code className="rounded-md bg-muted px-1.5 py-0.5 text-xs">
             lib/portfolio-data.ts
           </code>
